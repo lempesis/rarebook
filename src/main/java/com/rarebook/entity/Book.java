@@ -1,5 +1,6 @@
 package com.rarebook.entity;
 
+<<<<<<< HEAD
 public class Book {
     private int id;
     private String name;
@@ -44,4 +45,25 @@ public class Book {
     public void setPrice(double price) {
         this.price = price;
     }
+=======
+import lombok.Getter;
+import lombok.Setter;
+import javax.persistence.*;
+
+@Entity
+@Table(name = "books")
+@Getter
+@Setter
+public class Book {
+
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    private String title;
+    private String author;
+    private String isbn;
+    private String description;
+    private String coverImage;
+>>>>>>> master
 }
